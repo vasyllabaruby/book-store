@@ -38,7 +38,7 @@ jobs:
           command: bundle exec rails db:schema:load --trace
       - run:
           name: run rspec
-          command: rspec spec
+          command: bundle exec rspec
 
 workflows:
   version: 2
