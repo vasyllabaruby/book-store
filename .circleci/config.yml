@@ -6,9 +6,14 @@ executors:
   default:
     working_directory: ~/repo
     docker:
-      - image: cimg/ruby:3.1.2
-      environment:
-                RAILS_ENV: test
+      - image: circleci/ruby:2.5.3-node-browsers-legacy
+         environment:
+           - RAILS_ENV=test
+           - DATABASE_URL=postgres://username@localhost:5432/bookstore_test
+       - image: circleci/postgres:11
+         environment:
+           - POSTGRES_USER=username
+           - POSTGRES_DB=bookstore_test
 caches:
   - &bundle_cache -repo
 commands:
