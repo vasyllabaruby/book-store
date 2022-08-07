@@ -31,3 +31,21 @@
 
 en:
   hello: "Hello world"
+  footer:
+    home: "Home"
+    shop: "Shop"
+    orders: "Orders"
+    settings: "Settings"
+  header:
+    shop_title: "BookStore"
+    home: "Home"
+    shop: "Shop"
+    my_account: "My account"
+    log_out: "Log out"
+    exp:
+      mobi_dev: "Mobile development"
+      photo: "Photo"
+      web_design: "Web design"
+  home:
+    welcome: "Welcome to our amazing Bookstore!"
+    welcome_message: "We pore through hundreds of new books each month and select the five best we can find to share with our members."
