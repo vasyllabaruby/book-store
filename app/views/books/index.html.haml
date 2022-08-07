@@ -1,66 +1,66 @@
 %main.container
-  %h1.general-title-margin Сatalog
+  %h1.general-title-margin= t('index.catalog_title')
   .hidden-xs.clearfix
     .dropdowns.pull-right
       .dropdown.width-240
         %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-          Newest first
+          = t('index.filter.newest_first')
           %i.fa.fa-angle-down.dropdown-icon.pull-right
         %ul.dropdown-menu
           %li
-            %a{href: "#"} Newest first
+            %a{href: "#"}= t('index.filter.newest_first')
           %li
-            %a{href: "#"} Popular first
+            %a{href: "#"}= t('index.filter.popular_first')
           %li
-            %a{href: "#"} Price: Low to hight
+            %a{href: "#"}= t('index.filter.price_low')
           %li
-            %a{href: "#"} Price: Hight to low
+            %a{href: "#"}= t('index.filter.price_high')
     %ul.list-inline.pt-10.mb-25.mr-240
       %li.mr-35
         %a.filter-link{href: "#"}
-          All
+          = t('index.filter.categories.all')
           %span.badge.general-badge 135
       %li.mr-35
         %a.filter-link{href: "#"}
-          Mobile Development
+          = t('index.filter.categories.mobi_dev')
           %span.badge.general-badge 135
       %li.mr-35
         %a.filter-link{href: "#"}
-          Photo
+          = t('index.filter.categories.photo')
           %span.badge.general-badge 135
       %li.mr-35
         %a.filter-link{href: "#"}
-          Web Design
+          = t('index.filter.categories.web_design')
           %span.badge.general-badge 135
   .dropdowns.mb-25.visible-xs
-    %p.lead.small.mb-10 Filter by category
+    %p.lead.small.mb-10= t('index.filter.filter_title')
     .dropdown
       %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-        Newest first
+        = t('index.filter.newest_first')
         %i.fa.fa-angle-down.dropdown-icon.pull-right
       %ul.dropdown-menu
         %li
-          %a{href: "#"} Newest first
+          %a{href: "#"}= t('index.filter.newest_first')
         %li
-          %a{href: "#"} Popular first
+          %a{href: "#"}= t('index.filter.popular_first')
         %li
-          %a{href: "#"} Price: Low to hight
+          %a{href: "#"}= t('index.filter.price_low')
         %li
-          %a{href: "#"} Price: Hight to low
-    %p.lead.small.mb-10 Sort by
+          %a{href: "#"}= t('index.filter.price_high')
+    %p.lead.small.mb-10= t('index.filter.sort_by')
     .dropdown
       %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-        Newest first
+        = t('index.filter.newest_first')
         %i.fa.fa-angle-down.dropdown-icon.pull-right
       %ul.dropdown-menu
         %li
-          %a{href: "#"} Newest first
+          %a{href: "#"}= t('index.filter.newest_first')
         %li
-          %a{href: "#"} Popular first
+          %a{href: "#"}= t('index.filter.popular_first')
         %li
-          %a{href: "#"} Price: Low to hight
+          %a{href: "#"}= t('index.filter.price_low')
         %li
-          %a{href: "#"} Price: Hight to low
+          %a{href: "#"}= t('index.filter.price_high')
   .mb-120
     .row
       .col-xs-6.col-sm-3
@@ -185,4 +185,4 @@
           %span.divider-sm
           %p.lead.small Bass Jobsen, David Cochran, Ian Whitley
     .text-center
-      %button.btn.btn-primary View More
+      %button.btn.btn-primary= t('index.view_more')
