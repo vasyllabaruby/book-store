@@ -67,3 +67,15 @@ en:
         mobi_dev: "Mobile Development"
         photo: "Photo"
         web_design: "Web Design"
+  show: #book page
+    back: "Back to results"
+    add_to_cart: "Add to Cart"
+    dimensions: "Dimensions"
+    year_of_publication: "Year of publication"
+    materials: "Materials"
+    write_review: "Write a Review"
+    score: "Score"
+    comment:
+      title: "Title"
+      review: "Review"
+      post: "Post"
