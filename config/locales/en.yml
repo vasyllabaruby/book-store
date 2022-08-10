@@ -70,6 +70,8 @@ en:
   show: #book page
     back: "Back to results"
     add_to_cart: "Add to Cart"
+    description: "Description"
+    read_more: "Read More"
     dimensions: "Dimensions"
     year_of_publication: "Year of publication"
     materials: "Materials"
