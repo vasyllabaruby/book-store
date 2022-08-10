@@ -1,5 +1,5 @@
 %main.container
-  %a.general-back-link{href: "#"}
+  %a.general-back-link{href: "#{url_for(:back)}"}
     %i.fa.fa-long-arrow-left.mr-15
     = t('show.back')
   .row
@@ -15,8 +15,8 @@
           %a.img-link{href: "#"}
             %img{src: "https://www.smashingmagazine.com/wp-content/uploads/2015/09/smashing-book-5-2-large.jpg"}
     .col-sm-6
-      %h1.mt-res-0 Real-Life Responsive Web Design
-      %p.lead.small Vitaly Friedman, Daniel Mall,Vitaly Friedman
+      %h1.mt-res-0= @book.name
+      %p.lead.small= @book.author
       .row
         .col-xs-12.col-md-4
           %p.h1.in-gold-500.mt-10 €32.90
