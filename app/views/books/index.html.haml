@@ -19,12 +19,12 @@
     %li.mr-35
       %a.filter-link{href: "#"}
         = t('index.filter.categories.all')
-        %span.badge.general-badge 135
+        %span.badge.general-badge= Book.all.count
     - @categories.each do |category|
       %li.mr-35
         %a.filter-link{href: "#"}
           = category.name
-          %span.badge.general-badge 135
+          %span.badge.general-badge= category.books_count(category.id)
   .dropdowns.mb-25.visible-xs
     %p.lead.small.mb-10= t('index.filter.filter_title')
     .dropdown
