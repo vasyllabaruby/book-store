@@ -15,23 +15,16 @@
             %a{href: "#"}= t('index.filter.price_low')
           %li
             %a{href: "#"}= t('index.filter.price_high')
-    %ul.list-inline.pt-10.mb-25.mr-240
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          = t('index.filter.categories.all')
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          = t('index.filter.categories.mobi_dev')
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          = t('index.filter.categories.photo')
-          %span.badge.general-badge 135
-      %li.mr-35
-        %a.filter-link{href: "#"}
-          = t('index.filter.categories.web_design')
-          %span.badge.general-badge 135
+  %ul.list-inline.pt-10.mb-25.mr-240
+    %li.mr-35
+      %a.filter-link{href: "#"}
+        = t('index.filter.categories.all')
+        %span.badge.general-badge 135
+  - @categories.each do |category|
+    %li.mr-35
+      %a.filter-link{href: "#"}
+        = category.name
+        %span.badge.general-badge 135
   .dropdowns.mb-25.visible-xs
     %p.lead.small.mb-10= t('index.filter.filter_title')
     .dropdown
@@ -43,10 +36,6 @@
           %a{href: "#"}= t('index.filter.newest_first')
         %li
           %a{href: "#"}= t('index.filter.popular_first')
-        %li
-          %a{href: "#"}= t('index.filter.price_low')
-        %li
-          %a{href: "#"}= t('index.filter.price_high')
     %p.lead.small.mb-10= t('index.filter.sort_by')
     .dropdown
       %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
