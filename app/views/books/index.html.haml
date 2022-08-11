@@ -29,13 +29,14 @@
     %p.lead.small.mb-10= t('index.filter.filter_title')
     .dropdown
       %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}
-        = t('index.filter.newest_first')
+        = @curent_category_name
         %i.fa.fa-angle-down.dropdown-icon.pull-right
       %ul.dropdown-menu
         %li
-          %a{href: "#"}= t('index.filter.newest_first')
-        %li
-          %a{href: "#"}= t('index.filter.popular_first')
+          %a{href: "/books"}= t('index.filter.categories.all')
+        - @categories.each do |category|
+          %li
+            %a{href: "/books?category=#{category.id}"}= category.name
     %p.lead.small.mb-10= t('index.filter.sort_by')
     .dropdown
       %a.dropdown-toggle.lead.small{href: "#", 'data-toggle': "dropdown", role: "button", 'aria-haspopup': "true", 'aria-expanded': "false"}

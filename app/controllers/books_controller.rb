@@ -3,13 +3,15 @@ class BooksController < ApplicationController
   def home
     @books = Book.all
   end
-  
+
   def index
     @categories = Category.all
     if params[:category].present?
-      @books = Book.where(category: params[:category])
+      @books = Book.search(params[:category])
+      @curent_category_name = Category.find_by(id: params[:category]).name
     else
       @books = Book.all
+      @curent_category_name = "All"
     end
   end
 
