@@ -17,12 +17,12 @@
             %a{href: "#"}= t('index.filter.price_high')
   %ul.list-inline.pt-10.mb-25.mr-240
     %li.mr-35
-      %a.filter-link{href: "#"}
+      %a.filter-link{href: "/books"}
         = t('index.filter.categories.all')
         %span.badge.general-badge= Book.all.count
     - @categories.each do |category|
       %li.mr-35
-        %a.filter-link{href: "#"}
+        %a.filter-link{href: "/books?category=#{category.id}"}
           = category.name
           %span.badge.general-badge= category.books_count(category.id)
   .dropdowns.mb-25.visible-xs
