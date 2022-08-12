@@ -1,9 +1,5 @@
 class BooksController < ApplicationController
 
-  def home
-    @books = Book.all
-  end
-
   def index
     @categories = Category.all
     if params[:category].present?
