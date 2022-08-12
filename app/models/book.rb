@@ -5,6 +5,6 @@ class Book < ApplicationRecord
   validates :name, :author, :price, presence: true
 
   def self.search(category)
-     Book.where(category: category)
+     Book.where(category: category).order(price: :asc)
   end
 end
