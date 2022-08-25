@@ -52,3 +52,32 @@ en:
     get_started: "Get Started"
     best_sellers: "Best Sellers"
     buy_now: "Buy Now"
+  index:   #catalog
+    catalog_title: "Сatalog"
+    view_more: "View More"
+    filter:
+      filter_title: "Filter by category"
+      sort_by: "Sort by"
+      newest_first: "Newest first"
+      popular_first: "Popular first"
+      price_low: "Price: Low to hight"
+      price_high: "Price: Hight to low"
+      categories:
+        all: "All"
+        mobi_dev: "Mobile Development"
+        photo: "Photo"
+        web_design: "Web Design"
+  show: #book page
+    back: "Back to results"
+    add_to_cart: "Add to Cart"
+    description: "Description"
+    read_more: "Read More"
+    dimensions: "Dimensions"
+    year_of_publication: "Year of publication"
+    materials: "Materials"
+    write_review: "Write a Review"
+    score: "Score"
+    comment:
+      title: "Title"
+      review: "Review"
+      post: "Post"
