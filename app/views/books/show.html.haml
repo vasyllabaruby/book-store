@@ -33,31 +33,14 @@
       .general-info-wrap.divider-lg
         %p= t('show.description')
         - if @book.description.size > 240
-          %p{class: "lead small line-height-2 truncated-paragraph-#{@book.id}"}
+          %p{class: "lead small line-height-2 truncated-paragraph"}
             = truncate strip_tags(@book.description), length: 240
-          %p{class: "lead small line-height-2 normal-paragraph-#{@book.id}", style: "display: none;"}
+          %p{class: "lead small line-height-2 normal-paragraph", style: "display: none;"}
             = strip_tags(@book.description)
-          %a{class: "in-gold-500 ml-10 read-more-#{@book.id}", href: "#"}= t('show.read_more')
-          %a{class: "in-gold-500 ml-10 read-more-#{@book.id}", href: "#"} Read Less
+          %a{class: "in-gold-500 ml-10 read-more", href: "#"}= t('show.read_more')
+          %a{class: "in-gold-500 ml-10 read-less", href: "#"} Read Less
         - else
           = @book.description
-          :javascript
-            $('[class^="read-more"]').click(function(element) {
-              element.preventDefault()
-              $(`.truncated-paragraph-${elId($(this))}`).hide()
-              $(`.normal-paragraph-${elId($(this))}`).show()
-            })
-
-            $('[class^="read-less"]').click(function(element) {
-              element.preventDefault()
-              $(`.normal-paragraph-${elId($(this))}`).hide()
-              $(`.truncated-paragraph-${elId($(this))}`).show()
-            })
-
-            function elId(element) {
-              let elClassName = element.attr('class').split('-')
-              return elClassName[elClassName.length - 1]
-            }
       .general-info-wrap.divider-lg
         .clearfix
           %p.pull-left= t('show.year_of_publication')
