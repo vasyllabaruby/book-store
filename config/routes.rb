@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "home#show"
 
-  resources :home, only: [:index]
   resources :books
 end
