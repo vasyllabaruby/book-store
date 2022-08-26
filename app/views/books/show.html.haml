@@ -33,12 +33,12 @@
       .general-info-wrap.divider-lg
         %p= t('show.description')
         - if @book.description.size > 240
-          %p{class: "lead small line-height-2 truncated-paragraph"}
+          %p.lead.small.line-height-2.truncated-paragraph
             = truncate strip_tags(@book.description), length: 240
-          %p{class: "lead small line-height-2 normal-paragraph", style: "display: none;"}
+          %p.lead.small.line-height-2.normal-paragraph{style: "display: none;"}
             = strip_tags(@book.description)
-          %a{class: "in-gold-500 ml-10 read-more", href: "#"}= t('show.read_more')
-          %a{class: "in-gold-500 ml-10 read-less", href: "#"} Read Less
+          %a.in-gold-500.ml-10.read-less{href: "#"} Read Less
+          %a.in-gold-500.ml-10.read-more{href: "#"}= t('show.read_more')
         - else
           = @book.description
       .general-info-wrap.divider-lg
@@ -108,3 +108,4 @@
             %i.fa.fa-star.rate-star.rate-empty
           %p If ‘Get a better job’ had landed on my desk a year ago, I might have been dismissive of it. Instead I was prepared to be open-minded. There have been many occasions where I turned to career books with practical activities to look for some inspiration when developing education activities for learners or assessment.
 %script{src: "https://use.fontawesome.com/67602d7308.js"}
+%script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
