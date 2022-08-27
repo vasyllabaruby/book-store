@@ -35,10 +35,10 @@
         - if @book.description.size > 240
           %p.lead.small.line-height-2.truncated-paragraph
             = truncate strip_tags(@book.description), length: 240
+            %a.in-gold-500.ml-10.read-more{href: "#"}= t('show.read_more')
           %p.lead.small.line-height-2.normal-paragraph{style: "display: none;"}
             = strip_tags(@book.description)
-          %a.in-gold-500.ml-10.read-less{href: "#"} Read Less
-          %a.in-gold-500.ml-10.read-more{href: "#"}= t('show.read_more')
+            %a.in-gold-500.ml-10.read-less{href: "#"} Read Less
         - else
           = @book.description
       .general-info-wrap.divider-lg

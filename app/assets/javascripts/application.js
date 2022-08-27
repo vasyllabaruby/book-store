@@ -1,20 +1,18 @@
 //= require jquery
 //= require bootstrap
 
+
+
 $(document).ready(function() {
-    alert(12345)
+    alert(123456)
     $('.read-more').click(function(element) {
       element.preventDefault()
-      $(this).parent().find('.truncated-paragraph').hide()
-      $(this).parent().find('.normal-paragraph').show()
-      $(this).hide()
-      $(this).parent().find('.read-less').show()
+      $(this).parent().parent().find('.truncated-paragraph').hide()
+      $(this).parent().parent().find('.normal-paragraph').show()
     })
     $('.read-less').click(function(element) {
       element.preventDefault()
-      $(this).parent().find('.truncated-paragraph').show()
-      $(this).parent().find('.normal-paragraph').hide()
-      $(this).hide()
-      $(this).parent().find('.read-more').show()
+      $(this).parent().parent().find('.truncated-paragraph').show()
+      $(this).parent().parent().find('.normal-paragraph').hide()
     })
 })
