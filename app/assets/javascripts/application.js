@@ -4,7 +4,6 @@
 
 
 $(document).ready(function() {
-    alert(123456)
     $('.read-more').click(function(element) {
       element.preventDefault()
       $(this).parent().parent().find('.truncated-paragraph').hide()
