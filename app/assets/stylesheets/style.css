@@ -9039,3 +9039,10 @@ img {
 .mb-120 {
   margin-bottom: 120px !important;
 }
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
