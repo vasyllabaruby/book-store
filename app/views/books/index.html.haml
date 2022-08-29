@@ -70,7 +70,7 @@
             €
             = book.price
           %span.divider-sm
-          %p.lead.small= book.author
+          %p.lead.small= book.author.name
     .text-center
       %button.btn.btn-primary= t('index.view_more')
       != pagy_nav(@pagy)
